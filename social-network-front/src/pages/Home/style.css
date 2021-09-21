@@ -1,0 +1,148 @@
+/* Header */
+
+.header {
+    width: 100%;
+    height: 2.5rem;
+    padding: 0 1rem;
+    background-color: #05445e;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a.header-links {
+    color: #ffffff;
+    margin: 0 1rem;
+}
+
+a.header-links:visited {
+    color: #ffffff;
+}
+
+
+/* Main section*/
+
+.main {
+    position: relative;
+    margin: 1rem auto;
+    width: 95%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.4fr 1.4fr 0.8fr;
+    gap: 15px 15px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "user-area profile-summary user-network";
+  }
+
+/* User area */
+
+.user-area {
+    grid-area: user-area;
+    background-color: #ffffff; 
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;    
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-image {
+    width: 180px;
+    height: 180px;
+    margin: 20px 0;
+    border-radius: 50%;
+
+    /* background-image: url('/assets/Edd.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    
+    background-color: #808080;
+}
+
+.user-description {
+    margin: 20px 0;
+}
+
+.user-links {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Profile summary */
+
+.profile-summary { 
+    grid-area: profile-summary;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.summary-item {
+    margin: 1rem 0;
+}
+
+.msg-info {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.msg-image {
+    height: 80px;
+    width: 80px;
+    background-color: #808080;
+    border-radius: 50%;
+}
+
+.msg-content {
+    width: 75%;
+    margin: 0 2rem;
+}
+
+.msg-body {
+    margin: 1rem 0;
+}
+
+/* User network */
+
+.user-network { 
+    grid-area: user-network;
+    background-color: #ffffff; 
+}
+
+.section-grid {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem 1rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.section-tile {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.tile-image {
+    height: 100px;
+    width: 80px;
+    background-color: #808080;
+}
+
+/* Footer section */
+
+footer {
+    height: 50px;
+    width: 100%;
+    background-color:#05445e;
+    color: #ffffff;
+}
