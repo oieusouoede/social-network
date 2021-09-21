@@ -1,0 +1,19 @@
+main{
+    margin: 1rem 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto-fit, 20% 60% 20%;
+    //gap: 1rem;
+}
+
+.section1{
+    background-color: blue;
+}
+
+.section2{
+    background-color: green;
+}
+
+.section3{
+    background-color: purple;
+}

@@ -1,0 +1,30 @@
+header {
+  height: 3rem;
+  width: 100%;
+  background-color: red;
+  color: white;
+  font-weight: 900;
+  text-align: center;
+}
+
+main {
+  margin: 1rem 0;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto-fit, 20% 60% 20%;
+      grid-template-columns: auto-fit, 20% 60% 20%;
+}
+
+.section1 {
+  background-color: blue;
+}
+
+.section2 {
+  background-color: green;
+}
+
+.section3 {
+  background-color: purple;
+}
+/*# sourceMappingURL=style.css.map */

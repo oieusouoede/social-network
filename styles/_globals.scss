@@ -1,0 +1,17 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    scroll-padding-top: 60px;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    padding: 1rem;
+}
