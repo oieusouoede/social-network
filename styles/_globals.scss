@@ -1,7 +1,6 @@
 html {
     font-size: 100%;
     box-sizing: border-box;
-    scroll-padding-top: 60px;
 }
 
 *, *::before, *::after{
@@ -13,9 +12,6 @@ html {
 body{
     // Isso vai bugar a tela quando o navegador tiver dimensionado pra um 
     // tamanho menor do que o esperado mas eu resolvo isso mais tarde.
-    height: 100vh;
-    width: 100vw;
-    overflow-x: hidden;
+    width: 100%;
     background-color: $azulSuave;
-    padding: 1rem;
 }

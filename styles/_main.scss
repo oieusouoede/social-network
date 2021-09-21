@@ -1,33 +1,112 @@
 .container {
-    width: 100%;
+    position: relative;
+    margin: 1rem auto;
+    width: 95%;
     height: 100%;
     display: grid;
-    grid-template-columns: 0.4fr 1.4fr 0.7fr;
-    grid-template-rows: 0.2fr 2.6fr 0.2fr;
+    grid-template-columns: 0.4fr 1.4fr 0.8fr;
     gap: 15px 15px;
     grid-auto-flow: row;
     grid-template-areas:
-      "Header Header Header"
-      "Profile-Area Summary Friendlist"
-      "Footer Footer Footer";
+      "user-area profile-summary user-network";
   }
-  
-.Profile-Area { 
-    grid-area: Profile-Area;
+
+// User area
+
+.user-area {
+    grid-area: user-area;
+    background-color: $white; 
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;    
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-image {
+    width: 180px;
+    height: 180px;
+    margin: 20px 0;
+    border-radius: 50%;
+    background-image: url('/assets/Edd.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: gray;
+}
+
+.user-description {
+    margin: 20px 0;
+}
+
+.user-links {
+    display: flex;
+    flex-direction: column;
+}
+
+// Profile summary
+
+.profile-summary { 
+    grid-area: profile-summary;
+    background-color: $white;
+    padding: 20px;
+}
+
+.summary-item {
+    margin: 1rem 0;
+}
+
+.msg-info {
+    display: flex;
+    margin: 2rem 0;
+}
+
+.msg-image {
+    height: 80px;
+    width: 80px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.msg-content {
+    width: 75%;
+    margin: 0 2rem;
+}
+
+.msg-body {
+    margin: 1rem 0;
+}
+
+// User network
+
+.user-network { 
+    grid-area: user-network;
     background-color: $white; 
 }
-  
-.Summary { 
-    grid-area: Summary;
-    background-color: $white;
+
+.section-grid {
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem 1rem;
+    width: 100%;
+    padding: 1rem;
 }
-  
-.Friendlist { 
-    grid-area: Friendlist;
-    background-color: $white; 
+
+.section-tile {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
 }
-  
-.Footer { 
-    grid-area: Footer; 
-    background-color: $white;
+
+.tile-image {
+    height: 100px;
+    width: 80px;
+    background-color: grey;
 }

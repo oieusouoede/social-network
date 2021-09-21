@@ -2,7 +2,6 @@ html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  scroll-padding-top: 60px;
 }
 
 *, *::before, *::after {
@@ -13,18 +12,13 @@ html {
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
-  overflow-x: hidden;
+  width: 100%;
   background-color: #d4f1f4;
-  padding: 1rem;
 }
 
-.Header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: Header;
+header {
+  width: 100%;
+  height: 2.5rem;
   padding: 0 1rem;
   background-color: #05445e;
   color: #ffffff;
@@ -39,50 +33,162 @@ body {
           justify-content: space-between;
 }
 
-a {
+a.header-links {
   color: #ffffff;
 }
 
+a.header-links:visited {
+  color: white;
+}
+
 .container {
-  width: 100%;
+  position: relative;
+  margin: 1rem auto;
+  width: 95%;
   height: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.4fr 1.4fr 0.7fr;
-      grid-template-columns: 0.4fr 1.4fr 0.7fr;
-  -ms-grid-rows: 0.2fr 2.6fr 0.2fr;
-      grid-template-rows: 0.2fr 2.6fr 0.2fr;
+  -ms-grid-columns: 0.4fr 1.4fr 0.8fr;
+      grid-template-columns: 0.4fr 1.4fr 0.8fr;
   gap: 15px 15px;
   grid-auto-flow: row;
-      grid-template-areas: "Header Header Header" "Profile-Area Summary Friendlist" "Footer Footer Footer";
+      grid-template-areas: "user-area profile-summary user-network";
 }
 
-.Profile-Area {
-  -ms-grid-row: 2;
+.user-area {
+  -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: Profile-Area;
+  grid-area: user-area;
   background-color: #ffffff;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.Summary {
-  -ms-grid-row: 2;
+.user-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.user-image {
+  width: 180px;
+  height: 180px;
+  margin: 20px 0;
+  border-radius: 50%;
+  background-image: url("/assets/Edd.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: gray;
+}
+
+.user-description {
+  margin: 20px 0;
+}
+
+.user-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.profile-summary {
+  -ms-grid-row: 1;
   -ms-grid-column: 2;
-  grid-area: Summary;
+  grid-area: profile-summary;
   background-color: #ffffff;
+  padding: 20px;
 }
 
-.Friendlist {
-  -ms-grid-row: 2;
+.summary-item {
+  margin: 1rem 0;
+}
+
+.msg-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 2rem 0;
+}
+
+.msg-image {
+  height: 80px;
+  width: 80px;
+  background-color: grey;
+  border-radius: 50%;
+}
+
+.msg-content {
+  width: 75%;
+  margin: 0 2rem;
+}
+
+.msg-body {
+  margin: 1rem 0;
+}
+
+.user-network {
+  -ms-grid-row: 1;
   -ms-grid-column: 3;
-  grid-area: Friendlist;
+  grid-area: user-network;
   background-color: #ffffff;
 }
 
-.Footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: Footer;
-  background-color: #ffffff;
+.section-grid {
+  margin: 1rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(80px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 1rem 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.section-tile {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tile-image {
+  height: 100px;
+  width: 80px;
+  background-color: grey;
+}
+
+footer {
+  height: 80px;
+  width: 100%;
+  background-color: #05445e;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
