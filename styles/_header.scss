@@ -1,0 +1,14 @@
+.Header { 
+    grid-area: Header;
+    padding: 0 1rem;
+    background-color: $azulEscuro;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    color: $white;
+}
+

@@ -12,27 +12,22 @@
       "Footer Footer Footer";
   }
   
-.Header { 
-    grid-area: Header; 
-    background-color: blue;
-}
-  
 .Profile-Area { 
     grid-area: Profile-Area;
-    background-color: green; 
+    background-color: $white; 
 }
   
 .Summary { 
     grid-area: Summary;
-    background-color: purple;
+    background-color: $white;
 }
   
 .Friendlist { 
     grid-area: Friendlist;
-    background-color: yellow; 
+    background-color: $white; 
 }
   
 .Footer { 
     grid-area: Footer; 
-    background-color: pink;
+    background-color: $white;
 }

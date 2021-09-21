@@ -16,7 +16,31 @@ body {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
+  background-color: #d4f1f4;
   padding: 1rem;
+}
+
+.Header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: Header;
+  padding: 0 1rem;
+  background-color: #05445e;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+a {
+  color: #ffffff;
 }
 
 .container {
@@ -33,33 +57,25 @@ body {
       grid-template-areas: "Header Header Header" "Profile-Area Summary Friendlist" "Footer Footer Footer";
 }
 
-.Header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: Header;
-  background-color: blue;
-}
-
 .Profile-Area {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: Profile-Area;
-  background-color: green;
+  background-color: #ffffff;
 }
 
 .Summary {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: Summary;
-  background-color: purple;
+  background-color: #ffffff;
 }
 
 .Friendlist {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: Friendlist;
-  background-color: yellow;
+  background-color: #ffffff;
 }
 
 .Footer {
@@ -67,6 +83,6 @@ body {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: Footer;
-  background-color: pink;
+  background-color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
