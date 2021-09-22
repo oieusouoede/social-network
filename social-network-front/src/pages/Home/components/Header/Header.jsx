@@ -5,30 +5,26 @@ import './../../../../index.css';
 
 const HeaderSection = styled(AppBar)`
 
-    background-color: #05445e;
-    /* height: 3rem; */
-    align-items: center;
+    &.MuiAppBar-root{
+        background-color: #05445e;
+        height: 3rem;
+        align-items: center;
+    } 
+`;
 
-`
 
 const HeaderLinks = styled(Toolbar)`
 
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: space-between;
-
+    &.MuiToolbar-root{
+        width: 100%;
+        min-height: 2rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
 `;
-
-// ({
-//     width: '100%',
-//     minHeight: '2rem',
-//     height: '3rem',
-//     display: 'flex',
-//     alignItems: 'center',
-//     justifyContent: 'space-between',
-// });
-
 
 const Logo = styled.a`
 
@@ -37,24 +33,31 @@ const Logo = styled.a`
     text-decoration: none;
     &:visited{
         color: #ffffff;
-    }
-    
+    }   
 `;
 
+const NavLink = styled.a`
+
+    color: #ffffff;
+    margin: 0 0.5rem;
+    &:visited {
+        color: #ffffff;
+    }
+`;
 
 function Header(){
     return (
         <HeaderSection>
             <HeaderLinks>
-                <Logo href="/">WiredHub</Logo>                       
+                <Logo href="/">WiredHub</Logo>                        
                 <div>
-                    <a className="header-links" href="#00">Início</a>
-                    <a className="header-links" href="#00">Perfil</a>
-                    <a className="header-links" href="#00">Recados</a>
-                    <a className="header-links" href="#00">Amigos</a>
-                    <a className="header-links" href="#00">Comunidades</a>
+                    <NavLink href="/">Início</NavLink>
+                    <NavLink href="/">Perfil</NavLink>
+                    <NavLink href="/">Recados</NavLink>
+                    <NavLink href="/">Amigos</NavLink>
+                    <NavLink href="/">Comunidades</NavLink>
+                    <NavLink href="/">Sair</NavLink>
                 </div>
-                <a className="header-links" href="#00">Sair</a>
             </HeaderLinks>
         </HeaderSection>
     );
