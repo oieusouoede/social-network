@@ -1,8 +1,10 @@
-import React from "react";
+//import styled from 'styled-components';
+//import { Container } from '@mui/material';
 import '../../style.css';
 
 function Main() {
     return (
+        
         <main className="main">
             <div className="user-area">
                 <div className="user-info">
